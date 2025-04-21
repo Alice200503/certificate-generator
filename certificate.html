@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Achievement</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .certificate {
+            width: 800px;
+            height: 600px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border: 2px solid #00ff9d;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            color: #fff;
+        }
+
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="%2300ff9d" stroke-width="0.5"/></svg>');
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 36px;
+            color: #00ff9d;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .name {
+            font-size: 32px;
+            color: #00ff9d;
+            margin: 30px 0;
+            text-transform: uppercase;
+        }
+
+        .details {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .date {
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .robot {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="30" r="20" fill="%2300ff9d"/><rect x="30" y="50" width="40" height="40" fill="%2300ff9d"/></svg>');
+            opacity: 0.2;
+        }
+
+        .border {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid #00ff9d;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="border"></div>
+        <div class="header">
+            <img src="[YOUR_LOGO_URL]" alt="Company Logo" class="logo">
+            <h1 class="title">Certificate of Achievement</h1>
+            <p class="subtitle">AMERICA TEAM SALES TRAINING</p>
+        </div>
+        <div class="content">
+            <p class="details">This is to certify that</p>
+            <h2 class="name">[EMPLOYEE_NAME]</h2>
+            <p class="details">has successfully completed the New Sales Onboarding Training Program</p>
+            <p class="details">and demonstrated outstanding performance in all required assessments.</p>
+            <p class="date">Date: [CERTIFICATE_DATE]</p>
+        </div>
+        <div class="robot"></div>
+    </div>
+</body>
+</html> 
