@@ -5,132 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate of Achievement</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Pinyon+Script&display=swap');
         
         body {
             margin: 0;
-            padding: 0;
-            background: #0a0a0a;
+            padding: 40px;
+            background: #f5f5f5;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Cormorant Garamond', serif;
         }
 
         .certificate {
-            width: 800px;
+            width: 850px;
             height: 600px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border: 2px solid #00ff9d;
-            box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+            background: #fff;
+            padding: 50px;
+            text-align: center;
             position: relative;
-            overflow: hidden;
-            padding: 40px;
-            color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #873434;
         }
 
-        .certificate::before {
-            content: '';
+        .border-pattern {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="%2300ff9d" stroke-width="0.5"/></svg>');
-            opacity: 0.1;
-            z-index: 1;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .title {
-            font-size: 36px;
-            color: #00ff9d;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
-        }
-
-        .subtitle {
-            font-size: 18px;
-            color: #fff;
-            letter-spacing: 2px;
+            border: 2px solid #873434;
+            margin: 10px;
+            pointer-events: none;
         }
 
         .content {
-            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             position: relative;
-            z-index: 2;
+            z-index: 1;
         }
 
-        .name {
-            font-size: 32px;
-            color: #00ff9d;
-            margin: 30px 0;
-            text-transform: uppercase;
+        .logo {
+            width: 120px;
+            margin: 0 auto 20px;
         }
 
-        .details {
-            font-size: 16px;
+        .certificate-title {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 48px;
+            color: #873434;
+            margin: 20px 0;
+        }
+
+        .main-text {
+            font-size: 24px;
             line-height: 1.6;
             margin: 20px 0;
         }
 
+        .name {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 42px;
+            color: #333;
+            margin: 30px 0;
+        }
+
+        .details {
+            font-size: 20px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .signature-line {
+            width: 200px;
+            height: 1px;
+            background: #000;
+            margin: 10px auto;
+        }
+
+        .signature {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .seal {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            width: 120px;
+            height: 120px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="%23873434" stroke-width="2"/><circle cx="50" cy="50" r="35" fill="none" stroke="%23873434" stroke-width="1"/></svg>');
+            opacity: 0.8;
+        }
+
         .date {
-            margin-top: 40px;
-            font-size: 14px;
-        }
-
-        .robot {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 100px;
-            height: 100px;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="30" r="20" fill="%2300ff9d"/><rect x="30" y="50" width="40" height="40" fill="%2300ff9d"/></svg>');
-            opacity: 0.2;
-        }
-
-        .border {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            border: 1px solid #00ff9d;
-            pointer-events: none;
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="certificate">
-        <div class="border"></div>
-        <div class="header">
-            <img src="[YOUR_LOGO_URL]" alt="Company Logo" class="logo">
-            <h1 class="title">Certificate of Achievement</h1>
-            <p class="subtitle">AMERICA TEAM SALES TRAINING</p>
-        </div>
+        <div class="border-pattern"></div>
         <div class="content">
-            <p class="details">This is to certify that</p>
-            <h2 class="name">[EMPLOYEE_NAME]</h2>
-            <p class="details">has successfully completed the New Sales Onboarding Training Program</p>
-            <p class="details">and demonstrated outstanding performance in all required assessments.</p>
-            <p class="date">Date: [CERTIFICATE_DATE]</p>
+            <div>
+                <img src="[YOUR_LOGO_URL]" alt="OrionStar Logo" class="logo">
+                <h1 class="certificate-title">Certificate of Achievement</h1>
+                <p class="main-text">This is to certify that</p>
+                <h2 class="name">[EMPLOYEE_NAME]</h2>
+                <p class="details">has successfully completed the</p>
+                <p class="details">New Sales Onboarding Training Program</p>
+                <p class="details">America Team</p>
+            </div>
+            <div>
+                <div class="signature-line"></div>
+                <p class="signature">Director of Sales Training</p>
+                <p class="date">[CERTIFICATE_DATE]</p>
+            </div>
         </div>
-        <div class="robot"></div>
+        <div class="seal"></div>
     </div>
 </body>
 </html> 
